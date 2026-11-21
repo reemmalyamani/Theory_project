@@ -1,9 +1,4 @@
-"""
-Member 4: Interface Integration & Testing
-Connects: NFA input (nfa_gui) -> subset construction -> DFA output (dfa_output).
 
-Run:  python main_app.py
-"""
 import tkinter as tk
 from tkinter import messagebox
 
@@ -54,8 +49,7 @@ class IntegratedApp(NFAInputApp):
 
         # Put the button in the same frame as the Save button / status label.
         container = self.status.master
-        tk.Button(container, text="Convert to DFA", bg="#4CAF50", fg="white",
-                  command=self.convert).pack(pady=(0, 10), before=self.status)
+        tk.Button(container, text="Convert to DFA", command=self.convert).pack(pady=(0, 10), before=self.status)
 
     def convert(self):
         # 1) Read + validate the current input fields directly,
@@ -96,4 +90,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     IntegratedApp(root)
     root.mainloop()
-y
